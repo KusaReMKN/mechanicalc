@@ -149,7 +149,7 @@ class MechaniCalc {
     loadLeft(x) {
         // x を正規化して最小の長さにした t を用意する
         const t = Array(this.#d.length).fill(0);
-        x.forEach((e, i) => {
+        x.toReversed().forEach((e, i) => {
             if (i < t.length)
                 t[i] = e;
         });
@@ -256,7 +256,7 @@ class MechaniCalc {
      * 右にズラしきる
      */
     fullRight() {
-        this.#shift = this.#c.legnth-1;
+        this.#shift = this.#c.length-1;
     }
 
     /**
