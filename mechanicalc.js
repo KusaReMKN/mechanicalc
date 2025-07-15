@@ -273,6 +273,54 @@ class MechaniCalc {
         this.#bell = false;
     }
 
+    /**
+     * アキュムレータを得る
+     * @returns { number[] } アキュムレータのコピー
+     */
+    getA() {
+        return this.#a.toReversed();
+    }
+
+    /**
+     * カウンタを得る
+     * @returns { number[] } カウンタのコピー
+     */
+    getC() {
+        return this.#c.toReversed();
+    }
+
+    /**
+     * データを得る
+     * @returns { number[] } データのコピー
+     */
+    getD() {
+        return this.#d.toReversed();
+    }
+
+    /**
+     * シフト量を得る
+     * @return { number } シフト量
+     */
+    getShift() {
+        return this.#shift;
+    }
+
+    /**
+     * カウント方向を得る
+     * @return { string } カウント方向
+     */
+    getDir() {
+        return this.#dir;
+    }
+
+    /**
+     * ベルが鳴ったのかを得る
+     * @return { boolean } ベルが鳴ったのか
+     */
+    getBell() {
+        return this.#bell;
+    }
+
     debug() {
         console.debug(`a = ${this.#a.toReversed().join()}`);
         console.debug(`c = ${this.#c.toReversed().join()}`);
