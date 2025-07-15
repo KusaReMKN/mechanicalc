@@ -5,13 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mechanicalc</title>
 <script src="./mechanicalc.js" defer></script>
+<script src="./main.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+<style>
+pre {
+	line-height: 1;
+	overflow: scroll;
+}
+</style>
 </head>
 <body>
 <header>
 <h1>mechanicalc</h1>
 <p>
 機械式計算機の動作をシミュレートします。
+<strong>音が出ます</strong>。
 </p>
 </header>
+<main>
+<section>
+<h2>制御パネル</h2>
+<form id="formControl">
+<fieldset>
+<legend>置数レバー</legend>
+<label for="numData">置数する値:</label>
+<input type="number" id="numData" name="numData" step="1">
+<button id="btnLoadLeft" name="btnLoadLeft">左揃えで置く</button>
+<button id="btnLoadRight" name="btnLoadRight">右揃えで置く</button>
+<button id="btnLoadA" name="btnLoadA">右ダイヤルの値を置く</button>
+</fieldset>
+<fieldset>
+<legend>クランクハンドル</legend>
+<button id="btnAdd" name="btnAdd">加算する</button>
+<button id="btnSub" name="btnSub">減算する</button>
+</fieldset>
+<fieldset>
+<legend>桁送り</legend>
+<button id="btnFullLeft">左に送り切る</button>
+<button id="btnShiftLeft">左に一桁送る</button>
+<button id="btnShiftRight">右に一桁送る</button>
+<button id="btnFullRight">右に送り切る</button>
+</fieldset>
+<fieldset>
+<legend>レバークリア・帰零ハンドル</legend>
+<button id="btnClearD">置数をクリアする</button>
+<button id="btnClearC">左ダイヤルをクリアする</button>
+<button id="btnClearA">右ダイヤルをクリアする</button>
+</fieldset>
+</form>
+</section>
+<section>
+<h2>シミュレート結果</h2>
+<pre>
+<output id="output">
+</output>
+</pre>
+</section>
+</main>
 </body>
 </html>
