@@ -26,7 +26,8 @@ sqrt(k)
 		await sleep();
 		k.add();
 		await sleep();
-		x.push(x.pop() - 3);
+		if (x.length+1 < k.getC().length)
+			x.push(x.pop() - 3);
 	} while (k.shiftLeft());
 }
 
