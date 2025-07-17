@@ -125,6 +125,14 @@ formControl.addEventListener('submit', e => {
 				Array.from(formControl.getElementsByTagName('button'))
 					.forEach(e => e.disabled = false);
 			},
+		'btnSqrt':
+			async _ => {
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = true);
+				await sqrt(k);
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = false);
+			},
 	};
 	(proc[e.submitter.id] || (_ => 0))();
 

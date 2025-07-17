@@ -4,6 +4,33 @@ const delay = 100;
 const sleep = _ => new Promise(r => (update(), setTimeout(_ => r(), delay)));
 
 async function
+sqrt(k)
+{
+	k.clearBell();
+	k.clearC();
+	await sleep();
+	k.fullRight();
+
+	let x = [];
+	do {
+		if (x.length+1 < k.getC().length)
+			x.push(1);
+		do {
+			await sleep();
+			k.loadLeft(x);
+			await sleep();
+			k.sub();
+			if (x.length+1 < k.getC().length)
+				x.push(x.pop() + 2);
+		} while (!k.getBell());
+		await sleep();
+		k.add();
+		await sleep();
+		x.push(x.pop() - 3);
+	} while (k.shiftLeft());
+}
+
+async function
 div(k)
 {
 	k.clearBell();
