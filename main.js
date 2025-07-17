@@ -108,6 +108,23 @@ formControl.addEventListener('submit', e => {
 			_ => k.clearC(),
 		'btnClearA':
 			_ => k.clearA(),
+		// 乗除算
+		'btnMul':
+			async _ => {
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = true);
+				await mul(k, +numMul.value);
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = false);
+			},
+		'btnDiv':
+			async _ => {
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = true);
+				await div(k);
+				Array.from(formControl.getElementsByTagName('button'))
+					.forEach(e => e.disabled = false);
+			},
 	};
 	(proc[e.submitter.id] || (_ => 0))();
 

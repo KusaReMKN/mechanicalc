@@ -6,6 +6,7 @@
 <title>mechanicalc</title>
 <script src="./mechanicalc.js" defer></script>
 <script src="./main.js" defer></script>
+<script src="./control.js" defer></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 <style>
 pre {
@@ -51,6 +52,13 @@ pre {
 <button id="btnClearD">置数をクリアする</button>
 <button id="btnClearC">左ダイヤルをクリアする</button>
 <button id="btnClearA">右ダイヤルをクリアする</button>
+</fieldset>
+<fieldset>
+<legend>乗除算</legend>
+<label for="numMul">掛けられる値:</label>
+<input type="number" id="numMul" name="numMul" step="1">
+<button id="btnMul">置数ダイヤルの値と乗算する</button>
+<button id="btnDiv">右ダイヤルの値を置き数ダイヤルの値で除算する</button>
 </fieldset>
 </form>
 </section>
