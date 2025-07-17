@@ -29,6 +29,15 @@ play()
 }
 
 function
+showVisibleBell()
+{
+	container.classList.add('visible-bell');
+	setTimeout(() => {
+		container.classList.remove('visible-bell');
+	}, 1000);
+}
+
+function
 update()
 {
 	const a = k.getA();
@@ -41,6 +50,7 @@ update()
 
 	if (k.getBell()) {
 		play();
+		showVisibleBell();
 		k.clearBell();
 	}
 
