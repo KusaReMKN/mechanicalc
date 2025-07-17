@@ -89,6 +89,7 @@ mul(k, x)
 			case 9:
 				k.sub();
 				await sleep();
+			case 10:
 				s.push((s.pop() || 0) + 1);
 		}
 		k.shiftRight();
