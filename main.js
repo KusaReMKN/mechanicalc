@@ -31,9 +31,9 @@ play()
 function
 showVisibleBell()
 {
-	container.classList.add('visible-bell');
+	container.classList.replace('visible-bell-off', 'visible-bell-on');
 	setTimeout(() => {
-		container.classList.remove('visible-bell');
+		container.classList.replace('visible-bell-on', 'visible-bell-off');
 	}, 1000);
 }
 

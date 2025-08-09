@@ -12,8 +12,11 @@ pre {
 	line-height: 1;
 	overflow-x: scroll;
 }
-.visible-bell {
-    border: 5px solid #ff0000;
+.visible-bell-on {
+	border: 5px solid #ff0000;
+}
+.visible-bell-off {
+	border: 5px solid transparent;
 }
 </style>
 </head>
@@ -59,7 +62,7 @@ pre {
 </section>
 <section>
 <h2>シミュレート結果</h2>
-<pre id="container">
+<pre id="container" class="visible-bell-off">
 <output id="output">
 </output>
 </pre>
