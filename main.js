@@ -29,6 +29,15 @@ play()
 }
 
 function
+showVisibleBell()
+{
+	container.classList.replace('visible-bell-off', 'visible-bell-on');
+	setTimeout(() => {
+		container.classList.replace('visible-bell-on', 'visible-bell-off');
+	}, 1000);
+}
+
+function
 update()
 {
 	const a = k.getA();
@@ -41,6 +50,7 @@ update()
 
 	if (k.getBell()) {
 		play();
+		showVisibleBell();
 		k.clearBell();
 	}
 
